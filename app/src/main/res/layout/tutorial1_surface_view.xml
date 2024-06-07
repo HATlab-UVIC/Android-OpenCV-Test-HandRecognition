@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:opencv="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tutorial1_surface_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    tools:context=".Tutorial1Activity">
+    tools:context=".MainActivity">
 
-    <!--<TextView
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:background="#000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
+        android:text="select"
+        android:id="@+id/select"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
-    <org.opencv.android.JavaCameraView
-        android:id="@+id/tutorial1_activity_java_surface_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:visibility="gone"
-        opencv:camera_id="any"
-        opencv:show_fps="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="camera"
+        android:id="@+id/camera"
+        android:layout_below="@id/select"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
-</FrameLayout>
+</RelativeLayout>
